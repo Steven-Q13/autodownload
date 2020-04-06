@@ -1,2 +1,2 @@
-# auto_ownload
+# autodownload
 Automated remote torrent downloader through email transfer
