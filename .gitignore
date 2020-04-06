@@ -1,8 +1,8 @@
 #Development Notes
 *.txt
 
-#Leftover pyinstaller build
-auto_download.py.swp
+#Supporting Files for a python script
+*.swp
 
 #Gmail personal API keys
 *.json
@@ -14,5 +14,15 @@ auto_download.py.swp
 #setuptools distribution folder
 /dist/
 
+#Object specific files
+*.pickle
+
 #Compile python modules
 .pyc
+
+#Early Build Testing
+testFUNCTIONality.py
+
+#Spawned from running scripts locally
+./autodownload/__pycache__
+*.pyc

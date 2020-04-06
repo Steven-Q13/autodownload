@@ -3,7 +3,7 @@
 <plist version="1.0">
  <dict>
   <key>Label</key>
-  <string>com.auto_download.plist</string>
+  <string>com.autodownload.plist</string>
   
   <key>Program</key>
   <string>/Users/stevenqueen/Projects/Python/auto_download/dist/auto_download</string>
