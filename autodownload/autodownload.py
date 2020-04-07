@@ -87,11 +87,12 @@ class autodownload:
         path = '/'.join(path)
 
         with open('%s/key.txt' % path, 'rb') as fk:
-            key = f.read()
+            key = fk.read()
         fer = Fernet(key)
-        with open('%s/token.txt' % path, 'r') as fk:
-            token = f.read()
+        with open('%s/token.txt' % path, 'rb') as ft:
+            token = ft.read()
         token = fer.decrypt(token)
+        token = token.decode('utf-8')
 
         return token
 

@@ -1,5 +1,5 @@
 import os, getpass, subprocess, sys
-
+    
 from cryptography.fernet import Fernet
 
 def setup_autodownload(token, email, cred_path):
@@ -27,13 +27,14 @@ def setup_autodownload(token, email, cred_path):
 
         key = Fernet.generate_key()
         f = Fernet(key)
+        token = token.encode('utf-8')
         token = f.encrypt(token)
-        with open('%s/token.txt' % path, 'w') as ft:
-            f.write(token)
+        with open('%s/token.txt' % path, 'wb') as ft:
+            ft.write(token)
         with open('%s/key.txt' % path, 'wb') as fk:
-            f.write(key)
+            fk.write(key)
 
         subprocess.call(['mv', cred_path, '%s/credentials.json' % path])
 
-    #Arguments are password, user email, and path to credentials.json from google API
+#Arguments are password, user email, and path to credentials.json from google API
 setup_autodownload(sys.argv[1], sys.argv[2], sys.argv[3])
