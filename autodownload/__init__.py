@@ -21,8 +21,12 @@ def main():
         command2 = '#!/bin/bash\npython3 %s/autodownload/send_autodownload.py $1 $2 $3' % path
         fsend.write(command2)
 
+    with open('%s/bin/uninstall_autodownload.sh' % path, 'w') as fun:
+        command3 = '#!/bin/bash\npython3 %s/autodownload/uninstall_autodownload.py $1' % path
+        fsend.write(command3)
+
     with open('/Users/%s/.bash_profile' % getpass.getuser() , 'a') as f:
-        command3 = 'export PATH=$PATH:%s/bin' % path
-        f.append(command3)
+        command4 = 'export PATH=$PATH:%s/bin' % path
+        f.append(command4)
 
 main()
