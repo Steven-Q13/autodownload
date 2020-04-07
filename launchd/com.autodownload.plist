@@ -5,8 +5,11 @@
   <key>Label</key>
   <string>com.autodownload.plist</string>
   
-  <key>Program</key>
-  <string>JJJ1</string>
+  <key>ProgramArguments</key>
+  <array>
+  	<string>JJJ1</string>
+  	<string>JJJ2</string>
+  <array/>
   
   <key>RunAtLoad</key>
   <true/>
@@ -15,13 +18,13 @@
   <integer>3600</integer>
   
   <key>StandardOutPath</key>
-  <string>JJJ2</string>
-  
-  <key>StandardErrorPath</key>
   <string>JJJ3</string>
   
-  <key>WorkingDirectory</key>
+  <key>StandardErrorPath</key>
   <string>JJJ4</string>
+  
+  <key>WorkingDirectory</key>
+  <string>JJJ5</string>
   
  </dict>
 </plist>
