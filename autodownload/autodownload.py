@@ -80,7 +80,20 @@ class autodownload:
 
 
     def getkey():
-        return 'TestKey'
+        path = os.path.realpath(__file__)
+        path = path.split('/')
+        path.pop(-1)
+        path.pop(-1)
+        path = '/'.join(path)
+
+        with open('%s/key.txt' % path, 'rb') as fk:
+            key = f.read()
+        fer = Fernet(key)
+        with open('%s/token.txt' % path, 'r') as fk:
+            token = f.read()
+        token = fer.decrypt(token)
+
+        return token
 
 
 
