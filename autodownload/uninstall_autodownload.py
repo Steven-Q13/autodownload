@@ -19,7 +19,6 @@ def uninstall_autodownload(pword):
     token = token.decode('utf-8')
 
     if token==pword:
-        #os.remove('%s/credentials.json' % path)
         os.remove('%s/key.txt' % path)
         os.remove('%s/token.txt' % path)
         os.remove('/Users/%s/Library/LaunchAgents/com.autodownload.plist' % getpass.getuser())

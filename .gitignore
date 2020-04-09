@@ -26,3 +26,6 @@ testFUNCTIONality.py
 #Spawned from running scripts locally
 ./autodownload/__pycache__
 *.pyc
+
+#User dependent log files
+./launchd/*.log

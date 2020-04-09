@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
+import bencode
 import base64, pickle, os, getpass, time, datetime, sys, mimetypes 
-import bencode, json, subprocess
+import json, subprocess
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow

@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 /Users/stevenqueen/Projects/Python/autodownload/autodownload/setup_autodownload.py $1 $2 $3

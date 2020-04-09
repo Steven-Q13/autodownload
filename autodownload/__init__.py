@@ -13,15 +13,15 @@ def main():
     path = '/'.join(path)
 
 
-    with open('%s/bin/setup_autodownload.sh' % path, 'w') as fset:
-        command = '#!/bin/bash\npython3 %s/autodownload/send_autodownload.py $1 $2 $3' % path
+    with open('%s/bin/setup_autodownload' % path, 'w') as fset:
+        command = '#!/bin/bash\npython3 %s/autodownload/setup_autodownload.py $1 $2 $3' % path
         fset.write(command)
 
-    with open('%s/bin/send_autodownload.sh' % path, 'w') as fsend:
+    with open('%s/bin/send_autodownload' % path, 'w') as fsend:
         command2 = '#!/bin/bash\npython3 %s/autodownload/send_autodownload.py $1 $2 $3' % path
         fsend.write(command2)
 
-    with open('%s/bin/uninstall_autodownload.sh' % path, 'w') as fun:
+    with open('%s/bin/uninstall_autodownload' % path, 'w') as fun:
         command3 = '#!/bin/bash\npython3 %s/autodownload/uninstall_autodownload.py $1' % path
         fsend.write(command3)
 

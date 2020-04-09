@@ -15,7 +15,7 @@
   <true/>
   
   <key>StartInterval</key>
-  <integer>3600</integer>
+  <integer>20</integer>
   
   <key>StandardOutPath</key>
   <string>JJJ3</string>

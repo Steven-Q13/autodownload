@@ -12,9 +12,9 @@ def setup_autodownload(token, email, cred_path):
     with open('%s/launchd/com.autodownload.plist' % path, 'r') as f:
         contents = f.read()
     
-        contents = contents.replace('JJJ1', '%s/bin/checkmail' % path)
+        contents = contents.replace('JJJ1', '%s/bin/checkmail.sh' % path)
         contents = contents.replace('JJJ2', email)
-        contents = contents.replace('JJJ3', '%s/launchd/stoud.log' % path)
+        contents = contents.replace('JJJ3', '%s/launchd/stout.log' % path)
         contents = contents.replace('JJJ4', '%s/launchd/sterr.log' % path)
         contents = contents.replace('JJJ5', path)
         
@@ -35,6 +35,7 @@ def setup_autodownload(token, email, cred_path):
             fk.write(key)
 
         subprocess.call(['mv', cred_path, '%s/credentials.json' % path])
+        subprocess.call(['chmod', '+x', '%s/bin/checkmail.sh' % path])
 
 #Arguments are password, user email, and path to credentials.json from google API
 setup_autodownload(sys.argv[1], sys.argv[2], sys.argv[3])

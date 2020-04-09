@@ -26,11 +26,3 @@ def readme():
     with open('README.md') as file:
         return file.read()
       
-
-'''
-['os','google-api-python-client', 
-                        'google-auth-httplib2', 'google-auth-oauthlib',
-                        'picke', 'datetime', 'time', 'email.mime.text',
-                        'base64', 'getpass', 'sys', 'cryptography.fernet']
-'''
-
