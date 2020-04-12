@@ -1,2 +1,3 @@
 #!/bin/bash
+#Script that is added to users path so they can easily setup autodownload
 python3 /Users/stevenqueen/Projects/Python/autodownload/autodownload/setup_autodownload.py $1 $2 $3
