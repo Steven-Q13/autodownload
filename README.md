@@ -6,7 +6,8 @@ Guide:
 Setup:
 - Go to https://developers.google.com/gmail/api/quickstart/js and click "Enable the Gmail API" and "Create API Key"
 - Note where the downloaded file "credentials.json" was saved
-- In terminal put: "sudo pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib -t /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/site-packages
+- In terminal put: 
+"sudo pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib -t /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/site-packages
 "
 and
 "sudo pip install bencode.py -t /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/site-packages"
