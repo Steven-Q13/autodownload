@@ -28,4 +28,8 @@ testFUNCTIONality.py
 *.pyc
 
 #User dependent log files
-./launchd/*.log
+./launchd/sterr.log
+./launchd/stout.log
+
+#Installer file
+get-pip.py

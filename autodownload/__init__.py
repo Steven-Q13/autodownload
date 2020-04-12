@@ -23,7 +23,7 @@ def main():
 
     with open('%s/bin/uninstall_autodownload' % path, 'w') as fun:
         command3 = '#!/bin/bash\npython3 %s/autodownload/uninstall_autodownload.py $1' % path
-        fsend.write(command3)
+        fun.write(command3)
 
     with open('/Users/%s/.bash_profile' % getpass.getuser() , 'a') as f:
         command4 = 'export PATH=$PATH:%s/bin' % path

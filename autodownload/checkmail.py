@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys, autodownload
 
 #Called by checkmail exectuable in bin to check for download messages

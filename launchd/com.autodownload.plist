@@ -7,6 +7,7 @@
   
   <key>ProgramArguments</key>
   <array>
+  	<string>/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8</string>
   	<string>JJJ1</string>
   	<string>JJJ2</string>
   </array>
@@ -15,7 +16,7 @@
   <true/>
   
   <key>StartInterval</key>
-  <integer>20</integer>
+  <integer>3600</integer>
   
   <key>StandardOutPath</key>
   <string>JJJ3</string>
