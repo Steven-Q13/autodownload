@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 
-import bencode
 import base64, pickle, os, getpass, time, datetime, sys, mimetypes 
 import json, subprocess
+import importlib.util
 
+import bencode
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from apiclient import errors
 
-from cryptography.fernet import Fernet
+
+#from cryptography.fernet import Fernet
 from collections import OrderedDict
 
 from email.mime.audio import MIMEAudio
@@ -86,7 +88,7 @@ class autodownload:
         path.pop(-1)
         path.pop(-1)
         path = '/'.join(path)
-
+        '''
         with open('%s/key.txt' % path, 'rb') as fk:
             key = fk.read()
         fer = Fernet(key)
@@ -95,6 +97,10 @@ class autodownload:
         token = fer.decrypt(token)
         token = token.decode('utf-8')
 
+        return token
+        '''
+        with open('%s/token.txt' % path, 'r') as ft:
+            token = ft.read()
         return token
 
 

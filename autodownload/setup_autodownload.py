@@ -19,21 +19,24 @@ def setup_autodownload(token, email, cred_path):
         contents = contents.replace('JJJ5', path)
         
         user = getpass.getuser()
-        launchd_path = '/Users/%s/Library/LaunchAgents/com.autodownload.plist' % user
+        launchd_path = '/Library/LaunchDaemons/com.autodownload.plist' % user
         
         with open(launchd_path, 'w') as fnew:
             fnew.write(contents)
         subprocess.call(['launchctl', 'load', launchd_path])
 
+        '''
         key = Fernet.generate_key()
         f = Fernet(key)
         token = token.encode('utf-8')
         token = f.encrypt(token)
-        with open('%s/token.txt' % path, 'wb') as ft:
+        '''
+        with open('%s/token.txt' % path, 'w') as ft:
             ft.write(token)
+        '''
         with open('%s/key.txt' % path, 'wb') as fk:
             fk.write(key)
-
+        '''
         subprocess.call(['mv', cred_path, '%s/credentials.json' % path])
         subprocess.call(['chmod', '+x', '%s/bin/checkmail.sh' % path])
 
